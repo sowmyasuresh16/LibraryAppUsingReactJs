@@ -1,17 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDom from 'react-dom'
+// Importing Library component
+import Library from './Library'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+// Array of books data
+let bookList = [
+  {
+    title: 'The Deception Point',
+    author: 'Dan Brown',
+    noOfPages: '420'
+  },
+  {
+    title: 'The Famous Five',
+    author: 'Enid Bliton',
+    noOfPages: '210'
+  },
+  {
+    title: 'A walk to remember',
+    author: 'Nicholas Sparks',
+    noOfPages: '520'
+  }
+]
+
+// Rendering Library component 
+ReactDom.render(
+  <Library books={bookList} />,
   document.getElementById('root')
-);
+)
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
